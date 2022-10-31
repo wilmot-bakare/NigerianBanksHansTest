@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <th>Bank Name</th>
+    <th>Code</th>
+    <th>City</th>
+    <th>Slogan</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let bank of banks">
+      <td>{{ bank.name}}</td>
+      <td>{{ bank.code}}</td>
+      <td>{{ bank.city}}</td>
+      <td>{{ bank.slogan}}</td>
+    </tr>
+  </tbody>
+</table>
