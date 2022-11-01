@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { EditBankComponent } from './components/edit-bank/edit-bank.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    EditBankComponent
+    EditBankComponent,
   ],
   imports: [
     BrowserModule,
