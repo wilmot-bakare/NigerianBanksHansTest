@@ -1,4 +1,6 @@
-<table>
+<button (click)="initNewBank()">Create a New Bank</button>
+
+<table mat-table  class="mat-elevation-z8">
   <thead>
     <th>Bank Name</th>
     <th>Code</th>
@@ -11,6 +13,15 @@
       <td>{{ bank.code}}</td>
       <td>{{ bank.city}}</td>
       <td>{{ bank.slogan}}</td>
+      <td><button (click)="editBank(bank)">Edit</button></td>
     </tr>
   </tbody>
 </table>
+
+<app-edit-bank
+ [bank]="bankToEdit"
+ (banksUpdated)="updatedBankList($event)"
+ >
+  
+
+</app-edit-bank>
