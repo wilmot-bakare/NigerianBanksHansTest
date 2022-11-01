@@ -23,9 +23,9 @@ export class EditBankComponent implements OnInit {
       this.bankService
       .updateBanks(bank)
       .subscribe((banks:Bank[])=> this.banksUpdated.emit(banks));
-
+      alert("Success");
     }
-       alert("Success");
+     
   }
   deleteBank(bank:Bank){
     this.bankService
@@ -38,9 +38,9 @@ export class EditBankComponent implements OnInit {
       this.bankService
       .createBanks(bank)
       .subscribe((banks:Bank[])=> this.banksUpdated.emit(banks));
-    
+      alert("Success");
     }
-    alert("Success");
+   
   }
 
   validateBank(bank:Bank){
