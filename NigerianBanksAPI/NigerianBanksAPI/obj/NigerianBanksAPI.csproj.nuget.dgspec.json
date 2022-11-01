@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bakaretw\\source\\repos\\NigerianBanksAPI\\NigerianBanksAPI\\NigerianBanksAPI.csproj": {}
+    "C:\\Users\\bakaretw\\Documents\\NigerianBanksHansTest\\NigerianBanksAPI\\NigerianBanksAPI\\NigerianBanksAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bakaretw\\source\\repos\\NigerianBanksAPI\\NigerianBanksAPI\\NigerianBanksAPI.csproj": {
+    "C:\\Users\\bakaretw\\Documents\\NigerianBanksHansTest\\NigerianBanksAPI\\NigerianBanksAPI\\NigerianBanksAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bakaretw\\source\\repos\\NigerianBanksAPI\\NigerianBanksAPI\\NigerianBanksAPI.csproj",
+        "projectUniqueName": "C:\\Users\\bakaretw\\Documents\\NigerianBanksHansTest\\NigerianBanksAPI\\NigerianBanksAPI\\NigerianBanksAPI.csproj",
         "projectName": "NigerianBanksAPI",
-        "projectPath": "C:\\Users\\bakaretw\\source\\repos\\NigerianBanksAPI\\NigerianBanksAPI\\NigerianBanksAPI.csproj",
+        "projectPath": "C:\\Users\\bakaretw\\Documents\\NigerianBanksHansTest\\NigerianBanksAPI\\NigerianBanksAPI\\NigerianBanksAPI.csproj",
         "packagesPath": "C:\\Users\\bakaretw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bakaretw\\source\\repos\\NigerianBanksAPI\\NigerianBanksAPI\\obj\\",
+        "outputPath": "C:\\Users\\bakaretw\\Documents\\NigerianBanksHansTest\\NigerianBanksAPI\\NigerianBanksAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
