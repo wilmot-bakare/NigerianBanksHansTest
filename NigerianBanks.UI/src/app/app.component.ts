@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Bank } from './models/Bank';
-import { BankService } from './services/bank-.service';
+import { BankService } from './services/bank.service';
 
 @Component({
   selector: 'app-root',
