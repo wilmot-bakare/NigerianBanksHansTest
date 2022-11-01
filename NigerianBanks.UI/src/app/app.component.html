@@ -1,11 +1,13 @@
-<button (click)="initNewBank()">Create a New Bank</button>
+<h1>Nigerian Banks</h1>
+<button (click)="initNewBank()">Add A New Bank</button>
 
-<table mat-table  class="mat-elevation-z8">
+<table id="banks">
   <thead>
-    <th>Bank Name</th>
-    <th>Code</th>
-    <th>City</th>
-    <th>Slogan</th>
+    <th >Bank Name</th>
+    <th >Code</th>
+    <th >City</th>
+    <th >Slogan</th>
+    <th >Action</th>
   </thead>
   <tbody>
     <tr *ngFor="let bank of banks">
