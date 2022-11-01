@@ -13,8 +13,9 @@ export class AppComponent {
 
   constructor(private bankService: BankService){}
   ngOnInit() : void{
-   this.banks =this.bankService.getBanks();
-   console.log(this.banks);
+   this.bankService
+   .getBanks()
+   .subscribe((result:Bank[]) =>(this.banks = result));
 
   }
 }
