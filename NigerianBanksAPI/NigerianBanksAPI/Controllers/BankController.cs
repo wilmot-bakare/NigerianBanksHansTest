@@ -39,7 +39,7 @@ namespace NigerianBanksAPI.Controllers
                     sb.Append("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
                 }
 
-                return BadRequest(sb);
+                return BadRequest(sb.ToString());
             }
 
             _context.Banks.Add(bank);
@@ -62,7 +62,7 @@ namespace NigerianBanksAPI.Controllers
                     sb.Append("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
                 }
 
-                return BadRequest(sb);
+                return BadRequest(sb.ToString());
             }
 
             var foundBank = await _context.Banks.FindAsync(bank.Id);

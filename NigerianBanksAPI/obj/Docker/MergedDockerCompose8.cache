@@ -1,0 +1,60 @@
+name: dockercompose18296725901560179191
+services:
+  nigerianbanksapi:
+    build:
+      context: C:\Users\bakaretw\Documents\NigerianBanksHansTest\NigerianBanksAPI
+      dockerfile: NigerianBanksAPI/Dockerfile
+    container_name: nigerian-banks-api
+    depends_on:
+      nigerianbanksdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DB_HOST: nigerianbanksdb
+      DB_NAME: nigerianbanksapi
+      DB_SA_PASSWORD: P@ssw0rd12345
+      DB_USER_NAME: sa
+    image: nigerianbanksapi
+    networks:
+      nigerianbanksapi: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "4015"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\bakaretw\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\bakaretw\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  nigerianbanksdb:
+    container_name: newAppdb
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: P@ssw0rd12345
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      nigerianbanksapi: null
+    ports:
+    - mode: ingress
+      target: 1443
+      published: "8002"
+      protocol: tcp
+networks:
+  nigerianbanksapi:
+    name: dockercompose18296725901560179191_nigerianbanksapi

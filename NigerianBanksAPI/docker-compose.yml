@@ -1,0 +1,33 @@
+version: '3.4'
+
+networks:
+  nigerianbanksapi:
+
+services:
+  nigerianbanksdb:
+    container_name: newAppdb
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+        - "8002:1443"
+    environment: 
+        - ACCEPT_EULA=Y
+        - MSSQL_SA_PASSWORD=P@ssw0rd12345
+    networks:
+        - nigerianbanksapi
+  nigerianbanksapi:
+    container_name: nigerian-banks-api
+    image: ${DOCKER_REGISTRY-}nigerianbanksapi
+    build:
+      context: .
+      dockerfile: NigerianBanksAPI/Dockerfile
+    ports:
+        - "4015:443"
+    depends_on:
+        - nigerianbanksdb
+    environment:
+        - DB_HOST=nigerianbanksdb
+        - DB_NAME=nigerianbanksapi
+        - DB_SA_PASSWORD=P@ssw0rd12345
+        - DB_USER_NAME=sa
+    networks:
+        - nigerianbanksapi
