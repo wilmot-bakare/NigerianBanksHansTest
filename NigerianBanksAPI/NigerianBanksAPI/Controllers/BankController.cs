@@ -7,5 +7,20 @@ namespace NigerianBanksAPI.Controllers
     [ApiController]
     public class BankController : ControllerBase
     {
+        [HttpGet]
+        public async Task<ActionResult<List<Bank>>> GetBanks()
+        {
+            return new List<Bank> {
+                new Bank
+                {
+                    Id = 1,
+                    Name="Sterling Bank Plc",
+                    Code="STB",
+                    City="Lagos",
+                    Slogan="One Customer Bank"
+                }
+                
+                };
+        }
     }
 }
