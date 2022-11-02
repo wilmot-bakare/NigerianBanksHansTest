@@ -27,7 +27,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 builder.Services.AddCors(options => options.AddPolicy(name: "BankOrigins", 
     policy =>
     {
-        policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+        policy.WithOrigins("http://localhost:4200", "http://localhost:81").AllowAnyMethod().AllowAnyHeader();
     }
     ));
 
